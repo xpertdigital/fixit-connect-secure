@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Network, CheckCircle2, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/services/networking")({
-  head: () => ({
-    meta: [
-      { title: "Office Networking — TechCare Services" },
-      { name: "description", content: "Structured cabling, Wi-Fi, switches, routers, and firewall setup for offices. Reliable networks installed and maintained by certified technicians." },
-      { property: "og:title", content: "Office Networking — TechCare" },
-      { property: "og:description", content: "Reliable office networks: cabling, Wi-Fi, switches, and firewalls." },
-    ],
-  }),
-  component: NetworkingPage,
-});
 
 const features = [
   "Structured LAN cabling and patch panels",
@@ -30,9 +19,16 @@ const steps = [
   { n: "04", title: "Support", text: "Optional AMC with proactive monitoring and quick response." },
 ];
 
-function NetworkingPage() {
+export default function NetworkingPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>Office Networking — TechCare Services</title>
+        <meta name="description" content="Structured cabling, Wi-Fi, switches, routers, and firewall setup for offices. Reliable networks installed and maintained by certified technicians." />
+        <meta property="og:title" content="Office Networking — TechCare" />
+        <meta property="og:description" content="Reliable office networks: cabling, Wi-Fi, switches, and firewalls." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">

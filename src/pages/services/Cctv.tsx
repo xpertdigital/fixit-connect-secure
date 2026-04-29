@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Camera, CheckCircle2, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/services/cctv")({
-  head: () => ({
-    meta: [
-      { title: "CCTV Installation — TechCare Services" },
-      { name: "description", content: "Professional CCTV camera installation for homes and businesses. Site survey, wiring, configuration, and remote monitoring setup." },
-      { property: "og:title", content: "CCTV Installation — TechCare" },
-      { property: "og:description", content: "End-to-end CCTV installation with remote monitoring." },
-    ],
-  }),
-  component: CctvPage,
-});
 
 const features = [
   "Free on-site survey and quote",
@@ -30,9 +19,16 @@ const steps = [
   { n: "04", title: "Handover", text: "Mobile app setup, walkthrough, and a 90-day workmanship warranty." },
 ];
 
-function CctvPage() {
+export default function CctvPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>CCTV Installation — TechCare Services</title>
+        <meta name="description" content="Professional CCTV camera installation for homes and businesses. Site survey, wiring, configuration, and remote monitoring setup." />
+        <meta property="og:title" content="CCTV Installation — TechCare" />
+        <meta property="og:description" content="End-to-end CCTV installation with remote monitoring." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">
