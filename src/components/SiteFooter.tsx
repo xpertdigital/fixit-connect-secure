@@ -31,9 +31,9 @@ export function SiteFooter() {
           <div>
             <h4 className="font-serif text-base text-foreground">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /> +1 (555) 010-2233</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /> hello@techcare.example</li>
-              <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> Service area: citywide</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /><span>+1 (555) 010-2233</span></li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /><span>hello@techcare.example</span></li>
+              <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /><span>Service area: citywide</span></li>
             </ul>
           </div>
         </div>
