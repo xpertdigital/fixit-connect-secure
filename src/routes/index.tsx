@@ -90,6 +90,9 @@ function HomePage() {
               alt="Technician installing a CCTV security camera on a building"
               width={1536}
               height={1024}
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
               className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant"
             />
           </div>
