@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Camera, Laptop, Printer, ArrowRight } from "lucide-react";
+import { Camera, Laptop, Printer, Network, Globe, Megaphone, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -35,6 +35,27 @@ const services = [
     to: "/services/printer" as const,
     intro: "Servicing for inkjet, laser, and multifunction printers — at home or on-site at your office.",
     items: ["Paper jam & roller fixes", "Print head cleaning", "Network printer setup", "Ink & toner support"],
+  },
+  {
+    icon: Network,
+    title: "Office Networking",
+    to: "/services/networking" as const,
+    intro: "Structured cabling, business Wi-Fi, switches, and firewalls — designed and deployed for reliable office networks.",
+    items: ["LAN cabling & patch panels", "Wi-Fi access points & roaming", "Routers, switches & VLANs", "Firewalls & remote-access VPN"],
+  },
+  {
+    icon: Globe,
+    title: "Website Designing",
+    to: "/services/web-design" as const,
+    intro: "Modern, mobile-friendly websites with clean design, fast performance, and SEO-ready structure.",
+    items: ["Custom responsive design", "SEO-ready pages", "Contact, WhatsApp & Maps", "Hosting & domain support"],
+  },
+  {
+    icon: Megaphone,
+    title: "Digital Marketing",
+    to: "/services/digital-marketing" as const,
+    intro: "Local SEO, Google Ads, Meta Ads, and social media — measurable marketing that brings real leads.",
+    items: ["Local SEO & Google Business", "Google & Meta Ads", "Social media management", "Monthly performance reports"],
   },
 ];
 

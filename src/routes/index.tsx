@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Camera, Laptop, Printer, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { Camera, Laptop, Printer, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -33,6 +33,24 @@ const services = [
     title: "Printer Repair",
     description: "Keep your office productive with fast servicing, ink/toner support, and network printer setup.",
     to: "/services/printer" as const,
+  },
+  {
+    icon: Network,
+    title: "Office Networking",
+    description: "Structured cabling, business Wi-Fi, switches, and firewalls — networks built to keep your team productive.",
+    to: "/services/networking" as const,
+  },
+  {
+    icon: Globe,
+    title: "Website Designing",
+    description: "Modern, mobile-friendly websites that load fast, rank well, and turn visitors into customers.",
+    to: "/services/web-design" as const,
+  },
+  {
+    icon: Megaphone,
+    title: "Digital Marketing",
+    description: "SEO, Google Ads, and social media management that bring measurable leads to your business.",
+    to: "/services/digital-marketing" as const,
   },
 ];
 
