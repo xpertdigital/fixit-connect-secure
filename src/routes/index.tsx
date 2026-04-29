@@ -167,6 +167,59 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
+            <img
+              src={whyChooseUsImage}
+              alt="TechCare Services team of certified technicians ready to help"
+              width={1280}
+              height={960}
+              loading="lazy"
+              decoding="async"
+              className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant"
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+              <BadgeCheck className="h-3.5 w-3.5" /> Why choose us
+            </span>
+            <h2 className="mt-5 text-4xl text-foreground md:text-5xl">
+              The team your neighbours already trust
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              For over a decade, we've helped homes and businesses keep their tech running smoothly —
+              with honest advice, fair pricing, and work that's built to last.
+            </p>
+            <ul className="mt-8 space-y-5">
+              {[
+                { icon: Users, title: "500+ happy customers", text: "From single-store owners to multi-site offices across the city." },
+                { icon: Wrench, title: "10+ years of experience", text: "Seasoned hands who've seen — and solved — almost every tech problem." },
+                { icon: ThumbsUp, title: "90-day workmanship warranty", text: "If something we fixed acts up again, we make it right at no cost." },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg text-foreground">{item.title}</h3>
+                    <p className="mt-1 text-muted-foreground">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <Link
+              to="/about"
+              className="mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5"
+            >
+              Learn more about us <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <TestimonialsSlider />
 
