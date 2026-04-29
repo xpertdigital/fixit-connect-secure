@@ -13,8 +13,11 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesWebDesignRouteImport } from './routes/services.web-design'
 import { Route as ServicesPrinterRouteImport } from './routes/services.printer'
+import { Route as ServicesNetworkingRouteImport } from './routes/services.networking'
 import { Route as ServicesLaptopRouteImport } from './routes/services.laptop'
+import { Route as ServicesDigitalMarketingRouteImport } from './routes/services.digital-marketing'
 import { Route as ServicesCctvRouteImport } from './routes/services.cctv'
 
 const ServicesRoute = ServicesRouteImport.update({
@@ -37,9 +40,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesWebDesignRoute = ServicesWebDesignRouteImport.update({
+  id: '/web-design',
+  path: '/web-design',
+  getParentRoute: () => ServicesRoute,
+} as any)
 const ServicesPrinterRoute = ServicesPrinterRouteImport.update({
   id: '/printer',
   path: '/printer',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesNetworkingRoute = ServicesNetworkingRouteImport.update({
+  id: '/networking',
+  path: '/networking',
   getParentRoute: () => ServicesRoute,
 } as any)
 const ServicesLaptopRoute = ServicesLaptopRouteImport.update({
@@ -47,6 +60,12 @@ const ServicesLaptopRoute = ServicesLaptopRouteImport.update({
   path: '/laptop',
   getParentRoute: () => ServicesRoute,
 } as any)
+const ServicesDigitalMarketingRoute =
+  ServicesDigitalMarketingRouteImport.update({
+    id: '/digital-marketing',
+    path: '/digital-marketing',
+    getParentRoute: () => ServicesRoute,
+  } as any)
 const ServicesCctvRoute = ServicesCctvRouteImport.update({
   id: '/cctv',
   path: '/cctv',
@@ -59,8 +78,11 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/cctv': typeof ServicesCctvRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/laptop': typeof ServicesLaptopRoute
+  '/services/networking': typeof ServicesNetworkingRoute
   '/services/printer': typeof ServicesPrinterRoute
+  '/services/web-design': typeof ServicesWebDesignRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -68,8 +90,11 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/cctv': typeof ServicesCctvRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/laptop': typeof ServicesLaptopRoute
+  '/services/networking': typeof ServicesNetworkingRoute
   '/services/printer': typeof ServicesPrinterRoute
+  '/services/web-design': typeof ServicesWebDesignRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -78,8 +103,11 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRouteWithChildren
   '/services/cctv': typeof ServicesCctvRoute
+  '/services/digital-marketing': typeof ServicesDigitalMarketingRoute
   '/services/laptop': typeof ServicesLaptopRoute
+  '/services/networking': typeof ServicesNetworkingRoute
   '/services/printer': typeof ServicesPrinterRoute
+  '/services/web-design': typeof ServicesWebDesignRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -89,8 +117,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/services'
     | '/services/cctv'
+    | '/services/digital-marketing'
     | '/services/laptop'
+    | '/services/networking'
     | '/services/printer'
+    | '/services/web-design'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -98,8 +129,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/services'
     | '/services/cctv'
+    | '/services/digital-marketing'
     | '/services/laptop'
+    | '/services/networking'
     | '/services/printer'
+    | '/services/web-design'
   id:
     | '__root__'
     | '/'
@@ -107,8 +141,11 @@ export interface FileRouteTypes {
     | '/contact'
     | '/services'
     | '/services/cctv'
+    | '/services/digital-marketing'
     | '/services/laptop'
+    | '/services/networking'
     | '/services/printer'
+    | '/services/web-design'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -148,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/web-design': {
+      id: '/services/web-design'
+      path: '/web-design'
+      fullPath: '/services/web-design'
+      preLoaderRoute: typeof ServicesWebDesignRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/printer': {
       id: '/services/printer'
       path: '/printer'
@@ -155,11 +199,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesPrinterRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/services/networking': {
+      id: '/services/networking'
+      path: '/networking'
+      fullPath: '/services/networking'
+      preLoaderRoute: typeof ServicesNetworkingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/laptop': {
       id: '/services/laptop'
       path: '/laptop'
       fullPath: '/services/laptop'
       preLoaderRoute: typeof ServicesLaptopRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/digital-marketing': {
+      id: '/services/digital-marketing'
+      path: '/digital-marketing'
+      fullPath: '/services/digital-marketing'
+      preLoaderRoute: typeof ServicesDigitalMarketingRouteImport
       parentRoute: typeof ServicesRoute
     }
     '/services/cctv': {
@@ -174,14 +232,20 @@ declare module '@tanstack/react-router' {
 
 interface ServicesRouteChildren {
   ServicesCctvRoute: typeof ServicesCctvRoute
+  ServicesDigitalMarketingRoute: typeof ServicesDigitalMarketingRoute
   ServicesLaptopRoute: typeof ServicesLaptopRoute
+  ServicesNetworkingRoute: typeof ServicesNetworkingRoute
   ServicesPrinterRoute: typeof ServicesPrinterRoute
+  ServicesWebDesignRoute: typeof ServicesWebDesignRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesCctvRoute: ServicesCctvRoute,
+  ServicesDigitalMarketingRoute: ServicesDigitalMarketingRoute,
   ServicesLaptopRoute: ServicesLaptopRoute,
+  ServicesNetworkingRoute: ServicesNetworkingRoute,
   ServicesPrinterRoute: ServicesPrinterRoute,
+  ServicesWebDesignRoute: ServicesWebDesignRoute,
 }
 
 const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
