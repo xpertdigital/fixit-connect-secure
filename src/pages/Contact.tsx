@@ -1,25 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Us — TechCare Services" },
-      { name: "description", content: "Get in touch for CCTV installation, laptop repair, or printer servicing. Free quotes, same-day response." },
-      { property: "og:title", content: "Contact TechCare Services" },
-      { property: "og:description", content: "Free quotes and same-day response." },
-    ],
-  }),
-  component: ContactPage,
-});
-
-function ContactPage() {
+export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <SiteLayout>
+      <Helmet>
+        <title>Contact Us — TechCare Services</title>
+        <meta name="description" content="Get in touch for CCTV installation, laptop repair, or printer servicing. Free quotes, same-day response." />
+        <meta property="og:title" content="Contact TechCare Services" />
+        <meta property="og:description" content="Free quotes and same-day response." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl text-foreground md:text-6xl">Let's <span className="text-primary">talk.</span></h1>
@@ -56,10 +51,7 @@ function ContactPage() {
 
           <div className="lg:col-span-3">
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
+              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
               className="rounded-3xl border border-border bg-card p-8 shadow-elegant"
             >
               {submitted ? (
@@ -82,11 +74,7 @@ function ContactPage() {
                   </div>
                   <div className="mt-4">
                     <label className="text-sm font-medium text-foreground">Service needed</label>
-                    <select
-                      className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                      defaultValue=""
-                      required
-                    >
+                    <select className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" defaultValue="" required>
                       <option value="" disabled>Select a service</option>
                       <option>CCTV Installation</option>
                       <option>Laptop Repair</option>
@@ -96,17 +84,10 @@ function ContactPage() {
                   </div>
                   <div className="mt-4">
                     <label className="text-sm font-medium text-foreground">How can we help?</label>
-                    <textarea
-                      rows={4}
-                      className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-                      placeholder="Briefly describe the issue or project…"
-                    />
+                    <textarea rows={4} className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Briefly describe the issue or project…" />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow sm:w-auto"
-                  >
+                  <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow sm:w-auto">
                     Send request <Send className="h-4 w-4" />
                   </button>
                 </>
@@ -123,13 +104,7 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
   return (
     <div>
       <label htmlFor={name} className="text-sm font-medium text-foreground">{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
-      />
+      <input id={name} name={name} type={type} required={required} className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
     </div>
   );
 }

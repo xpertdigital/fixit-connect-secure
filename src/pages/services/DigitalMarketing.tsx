@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Megaphone, CheckCircle2, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/services/digital-marketing")({
-  head: () => ({
-    meta: [
-      { title: "Digital Marketing — TechCare Services" },
-      { name: "description", content: "SEO, Google Ads, Meta Ads, and social media management. Get found online and grow leads with measurable digital marketing." },
-      { property: "og:title", content: "Digital Marketing — TechCare" },
-      { property: "og:description", content: "SEO, paid ads, and social media that drive real leads." },
-    ],
-  }),
-  component: DigitalMarketingPage,
-});
 
 const features = [
   "Local SEO and Google Business Profile optimization",
@@ -30,9 +19,16 @@ const steps = [
   { n: "04", title: "Optimize", text: "Monthly review — double down on what works, cut what doesn't." },
 ];
 
-function DigitalMarketingPage() {
+export default function DigitalMarketingPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>Digital Marketing — TechCare Services</title>
+        <meta name="description" content="SEO, Google Ads, Meta Ads, and social media management. Get found online and grow leads with measurable digital marketing." />
+        <meta property="og:title" content="Digital Marketing — TechCare" />
+        <meta property="og:description" content="SEO, paid ads, and social media that drive real leads." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">

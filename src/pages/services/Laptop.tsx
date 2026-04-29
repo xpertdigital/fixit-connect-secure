@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Laptop, CheckCircle2, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/services/laptop")({
-  head: () => ({
-    meta: [
-      { title: "Laptop Repair — TechCare Services" },
-      { name: "description", content: "Expert laptop repair for all major brands. Screen replacements, battery swaps, virus removal, data recovery, and hardware diagnostics." },
-      { property: "og:title", content: "Laptop Repair — TechCare" },
-      { property: "og:description", content: "Fast, reliable laptop repairs with a no-fix no-fee promise." },
-    ],
-  }),
-  component: LaptopPage,
-});
 
 const services = [
   { title: "Screen replacement", text: "Cracked or flickering displays replaced with high-quality panels." },
@@ -23,9 +12,16 @@ const services = [
   { title: "Data recovery", text: "Recovery from failing drives, accidental deletion, or formatting." },
 ];
 
-function LaptopPage() {
+export default function LaptopPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>Laptop Repair — TechCare Services</title>
+        <meta name="description" content="Expert laptop repair for all major brands. Screen replacements, battery swaps, virus removal, data recovery, and hardware diagnostics." />
+        <meta property="og:title" content="Laptop Repair — TechCare" />
+        <meta property="og:description" content="Fast, reliable laptop repairs with a no-fix no-fee promise." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">

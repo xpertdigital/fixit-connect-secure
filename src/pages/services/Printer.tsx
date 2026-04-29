@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Printer, CheckCircle2, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/services/printer")({
-  head: () => ({
-    meta: [
-      { title: "Printer Repair — TechCare Services" },
-      { name: "description", content: "On-site printer repair and servicing for inkjet, laser, and multifunction printers. Network setup, paper jams, print quality, and more." },
-      { property: "og:title", content: "Printer Repair — TechCare" },
-      { property: "og:description", content: "Keep your office productive with professional printer servicing." },
-    ],
-  }),
-  component: PrinterPage,
-});
 
 const issues = [
   { title: "Paper jams & feeder issues", text: "Roller cleaning, replacement, and feed mechanism repairs." },
@@ -23,9 +12,16 @@ const issues = [
   { title: "Annual maintenance contracts", text: "Predictable pricing for offices with multiple devices." },
 ];
 
-function PrinterPage() {
+export default function PrinterPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>Printer Repair — TechCare Services</title>
+        <meta name="description" content="On-site printer repair and servicing for inkjet, laser, and multifunction printers. Network setup, paper jams, print quality, and more." />
+        <meta property="og:title" content="Printer Repair — TechCare" />
+        <meta property="og:description" content="Keep your office productive with professional printer servicing." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary">

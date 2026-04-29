@@ -1,59 +1,18 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
 import { Camera, Laptop, Printer, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone, Users, Wrench, ThumbsUp, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import whyChooseUsImage from "@/assets/why-choose-us.jpg";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "TechCare Services — CCTV, Laptop & Printer Repair Experts" },
-      { name: "description", content: "Trusted local technicians for CCTV installation, laptop repair, and printer servicing. Same-day service, transparent pricing, no-fix no-fee guarantee." },
-      { property: "og:title", content: "TechCare Services — CCTV, Laptop & Printer Repair" },
-      { property: "og:description", content: "Trusted local technicians for CCTV, laptops, and printers. Same-day service." },
-    ],
-  }),
-  component: HomePage,
-});
-
 const services = [
-  {
-    icon: Camera,
-    title: "CCTV Installation",
-    description: "Secure your home or business with professionally installed surveillance systems, fully configured for remote monitoring.",
-    to: "/services/cctv" as const,
-  },
-  {
-    icon: Laptop,
-    title: "Laptop Repair",
-    description: "Screen replacements, battery swaps, virus removal, and hardware diagnostics for every major laptop brand.",
-    to: "/services/laptop" as const,
-  },
-  {
-    icon: Printer,
-    title: "Printer Repair",
-    description: "Keep your office productive with fast servicing, ink/toner support, and network printer setup.",
-    to: "/services/printer" as const,
-  },
-  {
-    icon: Network,
-    title: "Office Networking",
-    description: "Structured cabling, business Wi-Fi, switches, and firewalls — networks built to keep your team productive.",
-    to: "/services/networking" as const,
-  },
-  {
-    icon: Globe,
-    title: "Website Designing",
-    description: "Modern, mobile-friendly websites that load fast, rank well, and turn visitors into customers.",
-    to: "/services/web-design" as const,
-  },
-  {
-    icon: Megaphone,
-    title: "Digital Marketing",
-    description: "SEO, Google Ads, and social media management that bring measurable leads to your business.",
-    to: "/services/digital-marketing" as const,
-  },
+  { icon: Camera, title: "CCTV Installation", description: "Secure your home or business with professionally installed surveillance systems, fully configured for remote monitoring.", to: "/services/cctv" },
+  { icon: Laptop, title: "Laptop Repair", description: "Screen replacements, battery swaps, virus removal, and hardware diagnostics for every major laptop brand.", to: "/services/laptop" },
+  { icon: Printer, title: "Printer Repair", description: "Keep your office productive with fast servicing, ink/toner support, and network printer setup.", to: "/services/printer" },
+  { icon: Network, title: "Office Networking", description: "Structured cabling, business Wi-Fi, switches, and firewalls — networks built to keep your team productive.", to: "/services/networking" },
+  { icon: Globe, title: "Website Designing", description: "Modern, mobile-friendly websites that load fast, rank well, and turn visitors into customers.", to: "/services/web-design" },
+  { icon: Megaphone, title: "Digital Marketing", description: "SEO, Google Ads, and social media management that bring measurable leads to your business.", to: "/services/digital-marketing" },
 ];
 
 const trustPoints = [
@@ -62,9 +21,16 @@ const trustPoints = [
   { icon: Award, title: "No-Fix No-Fee", text: "If we can't fix it, you don't pay a rupee. Simple." },
 ];
 
-function HomePage() {
+export default function HomePage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>TechCare Services — CCTV, Laptop & Printer Repair Experts</title>
+        <meta name="description" content="Trusted local technicians for CCTV installation, laptop repair, and printer servicing. Same-day service, transparent pricing, no-fix no-fee guarantee." />
+        <meta property="og:title" content="TechCare Services — CCTV, Laptop & Printer Repair" />
+        <meta property="og:description" content="Trusted local technicians for CCTV, laptops, and printers. Same-day service." />
+      </Helmet>
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-hero">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-28">
@@ -80,20 +46,13 @@ function HomePage() {
               certified local technicians who show up on time and get it right the first time.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5"
-              >
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5">
                 Book a free quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a
-                href="tel:+15550102233"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-smooth hover:border-primary hover:text-primary"
-              >
+              <a href="tel:+15550102233" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-smooth hover:border-primary hover:text-primary">
                 <Phone className="h-4 w-4" /> +1 (555) 010-2233
               </a>
             </div>
-
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-muted-foreground">
               {["Insured & licensed", "90-day warranty", "Transparent pricing"].map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
@@ -105,16 +64,7 @@ function HomePage() {
 
           <div className="relative">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
-            <img
-              src={heroImage}
-              alt="Technician installing a CCTV security camera on a building"
-              width={1536}
-              height={1024}
-              fetchPriority="high"
-              loading="eager"
-              decoding="async"
-              className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant"
-            />
+            <img src={heroImage} alt="Technician installing a CCTV security camera on a building" width={1536} height={1024} fetchPriority="high" loading="eager" decoding="async" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant" />
           </div>
         </div>
       </section>
@@ -123,18 +73,11 @@ function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl text-foreground">What we do best</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Three core services. One team you can trust.
-          </p>
+          <p className="mt-4 text-lg text-muted-foreground">Three core services. One team you can trust.</p>
         </div>
-
         <div className="mt-14 grid gap-8 md:grid-cols-3">
           {services.map((s) => (
-            <Link
-              key={s.title}
-              to={s.to}
-              className="group rounded-2xl border border-border bg-card p-8 shadow-soft transition-smooth hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant"
-            >
+            <Link key={s.title} to={s.to} className="group rounded-2xl border border-border bg-card p-8 shadow-soft transition-smooth hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant">
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-smooth group-hover:bg-primary group-hover:text-primary-foreground">
                 <s.icon className="h-7 w-7" />
               </div>
@@ -172,23 +115,13 @@ function HomePage() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
-            <img
-              src={whyChooseUsImage}
-              alt="TechCare Services team of certified technicians ready to help"
-              width={1280}
-              height={960}
-              loading="lazy"
-              decoding="async"
-              className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant"
-            />
+            <img src={whyChooseUsImage} alt="TechCare Services team of certified technicians ready to help" width={1280} height={960} loading="lazy" decoding="async" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant" />
           </div>
           <div className="order-1 lg:order-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
               <BadgeCheck className="h-3.5 w-3.5" /> Why choose us
             </span>
-            <h2 className="mt-5 text-4xl text-foreground md:text-5xl">
-              The team your neighbours already trust
-            </h2>
+            <h2 className="mt-5 text-4xl text-foreground md:text-5xl">The team your neighbours already trust</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               For over a decade, we've helped homes and businesses keep their tech running smoothly —
               with honest advice, fair pricing, and work that's built to last.
@@ -210,17 +143,13 @@ function HomePage() {
                 </li>
               ))}
             </ul>
-            <Link
-              to="/about"
-              className="mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5"
-            >
+            <Link to="/about" className="mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5">
               Learn more about us <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
       <TestimonialsSlider />
 
       {/* CTA */}
@@ -230,10 +159,7 @@ function HomePage() {
           <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/85">
             Tell us what's broken or what you'd like installed. We'll be in touch within an hour.
           </p>
-          <Link
-            to="/contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-card px-8 py-4 text-base font-semibold text-primary shadow-accent-glow transition-smooth hover:-translate-y-0.5"
-          >
+          <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-card px-8 py-4 text-base font-semibold text-primary shadow-accent-glow transition-smooth hover:-translate-y-0.5">
             Get in touch <ArrowRight className="h-5 w-5" />
           </Link>
         </div>

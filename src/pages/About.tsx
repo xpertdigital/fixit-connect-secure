@@ -1,18 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { ShieldCheck, Heart, Users, Wrench, ArrowRight } from "lucide-react";
-
-export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us — TechCare Services" },
-      { name: "description", content: "Meet the team behind TechCare Services. Local technicians with 10+ years of experience in CCTV, laptops, and printers." },
-      { property: "og:title", content: "About TechCare Services" },
-      { property: "og:description", content: "A local team of certified technicians you can trust." },
-    ],
-  }),
-  component: AboutPage,
-});
 
 const values = [
   { icon: ShieldCheck, title: "Trust", text: "Background-checked technicians, transparent quotes, no surprise charges." },
@@ -21,9 +10,16 @@ const values = [
   { icon: Users, title: "Community", text: "We're local, accountable, and only a phone call away." },
 ];
 
-function AboutPage() {
+export default function AboutPage() {
   return (
     <SiteLayout>
+      <Helmet>
+        <title>About Us — TechCare Services</title>
+        <meta name="description" content="Meet the team behind TechCare Services. Local technicians with 10+ years of experience in CCTV, laptops, and printers." />
+        <meta property="og:title" content="About TechCare Services" />
+        <meta property="og:description" content="A local team of certified technicians you can trust." />
+      </Helmet>
+
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl text-foreground md:text-6xl">A local team that <span className="text-primary">shows up.</span></h1>
