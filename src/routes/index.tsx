@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
-import { Camera, Laptop, Printer, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone } from "lucide-react";
+import { Camera, Laptop, Printer, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone, Users, Wrench, ThumbsUp, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
+import whyChooseUsImage from "@/assets/why-choose-us.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
