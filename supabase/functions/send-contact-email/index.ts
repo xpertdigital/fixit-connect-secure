@@ -119,7 +119,7 @@ Deno.serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Contact Form <onboarding@resend.dev>",
+        from: "TechCare Services <onboarding@resend.dev>",
         to: [NOTIFY_EMAIL],
         subject: `New contact: ${payload.name}${payload.service ? ` — ${payload.service}` : ""}`,
         html,
