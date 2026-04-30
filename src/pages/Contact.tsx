@@ -1,10 +1,46 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    const payload = {
+      name: String(fd.get("name") || "").trim(),
+      phone: String(fd.get("phone") || "").trim(),
+      email: String(fd.get("email") || "").trim() || undefined,
+      service: String(fd.get("service") || "").trim() || undefined,
+      message: String(fd.get("message") || "").trim() || undefined,
+    };
+
+    if (!payload.name || !payload.phone) {
+      toast.error("Please provide your name and phone number.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: payload,
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      toast.error("Couldn't send your request. Please try again or call us.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <SiteLayout>
@@ -51,7 +87,7 @@ export default function ContactPage() {
 
           <div className="lg:col-span-3">
             <form
-              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+              onSubmit={handleSubmit}
               className="rounded-3xl border border-border bg-card p-8 shadow-elegant"
             >
               {submitted ? (
@@ -73,8 +109,8 @@ export default function ContactPage() {
                     <Field label="Email" name="email" type="email" />
                   </div>
                   <div className="mt-4">
-                    <label className="text-sm font-medium text-foreground">Service needed</label>
-                    <select className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" defaultValue="" required>
+                    <label htmlFor="service" className="text-sm font-medium text-foreground">Service needed</label>
+                    <select id="service" name="service" className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" defaultValue="" required>
                       <option value="" disabled>Select a service</option>
                       <option>CCTV Installation</option>
                       <option>Laptop Repair</option>
@@ -83,12 +119,20 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div className="mt-4">
-                    <label className="text-sm font-medium text-foreground">How can we help?</label>
-                    <textarea rows={4} className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Briefly describe the issue or project…" />
+                    <label htmlFor="message" className="text-sm font-medium text-foreground">How can we help?</label>
+                    <textarea id="message" name="message" rows={4} className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Briefly describe the issue or project…" />
                   </div>
 
-                  <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow sm:w-auto">
-                    Send request <Send className="h-4 w-4" />
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow disabled:opacity-60 disabled:cursor-not-allowed sm:w-auto"
+                  >
+                    {loading ? (
+                      <>Sending… <Loader2 className="h-4 w-4 animate-spin" /></>
+                    ) : (
+                      <>Send request <Send className="h-4 w-4" /></>
+                    )}
                   </button>
                 </>
               )}
