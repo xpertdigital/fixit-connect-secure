@@ -142,6 +142,45 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Send confirmation email to the submitter (if they provided an email)
+    if (payload.email) {
+      const confirmationHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1a1a1a;">
+          <h2 style="color: #0f172a;">Thanks for reaching out, ${escapeHtml(payload.name)}!</h2>
+          <p>We've received your request and a member of our team will get back to you shortly — usually within an hour during business hours (Mon–Sat, 9 AM – 8 PM).</p>
+          <div style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 4px; margin: 20px 0;">
+            <div style="font-weight: bold; margin-bottom: 8px;">Your submission</div>
+            <div><strong>Name:</strong> ${escapeHtml(payload.name)}</div>
+            <div><strong>Phone:</strong> ${escapeHtml(payload.phone)}</div>
+            ${payload.service ? `<div><strong>Service:</strong> ${escapeHtml(payload.service)}</div>` : ""}
+            ${payload.message ? `<div style="margin-top: 8px;"><strong>Message:</strong><div style="white-space: pre-wrap; margin-top: 4px;">${escapeHtml(payload.message)}</div></div>` : ""}
+          </div>
+          <p>If you need urgent assistance, feel free to call us directly at <a href="tel:+15550102233">+1 (555) 010-2233</a>.</p>
+          <p style="margin-top: 24px;">— The TechCare Services Team</p>
+        </div>
+      `;
+
+      const confirmRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+        },
+        body: JSON.stringify({
+          from: "TechCare Services <onboarding@resend.dev>",
+          to: [payload.email],
+          subject: "We've received your request — TechCare Services",
+          html: confirmationHtml,
+        }),
+      });
+
+      if (!confirmRes.ok) {
+        // Don't fail the whole request — owner notification already succeeded.
+        const errText = await confirmRes.text();
+        console.error("Confirmation email failed:", confirmRes.status, errText);
+      }
+    }
+
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
