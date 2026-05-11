@@ -23,9 +23,9 @@ export default function CctvPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>CCTV Installation — TechCare Services</title>
+        <title>CCTV Installation — Digitek Solutions</title>
         <meta name="description" content="Professional CCTV camera installation for homes and businesses. Site survey, wiring, configuration, and remote monitoring setup." />
-        <meta property="og:title" content="CCTV Installation — TechCare" />
+        <meta property="og:title" content="CCTV Installation — Digitek Solutions" />
         <meta property="og:description" content="End-to-end CCTV installation with remote monitoring." />
       </Helmet>
 

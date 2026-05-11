@@ -11,7 +11,7 @@ export function SiteFooter() {
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground shadow-soft">
                 <ShieldCheck className="h-5 w-5" />
               </span>
-              <span className="font-serif text-xl text-foreground">TechCare Services</span>
+              <span className="font-serif text-xl text-foreground">Digitek Solutions</span>
             </Link>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
               Trusted local experts for CCTV installation, laptop repair, and printer servicing.
@@ -31,15 +31,15 @@ export function SiteFooter() {
           <div>
             <h4 className="font-serif text-base text-foreground">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /><span>+1 (555) 010-2233</span></li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /><span>hello@techcare.example</span></li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-primary" /><span>+91 98305 04138</span></li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-primary" /><span>info@digiteksolutions.net.in</span></li>
               <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /><span>Service area: citywide</span></li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} TechCare Services. All rights reserved.
+          © {new Date().getFullYear()} Digitek Solutions. All rights reserved.
         </div>
       </div>
     </footer>

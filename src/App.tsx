@@ -3,6 +3,7 @@ import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ServicesPage from "./pages/Services";
+import GalleryPage from "./pages/Gallery";
 import CctvPage from "./pages/services/Cctv";
 import LaptopPage from "./pages/services/Laptop";
 import PrinterPage from "./pages/services/Printer";
@@ -39,6 +40,7 @@ export default function App() {
       <Route path="/about" element={<AboutPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/services" element={<ServicesPage />} />
+      <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/services/cctv" element={<CctvPage />} />
       <Route path="/services/laptop" element={<LaptopPage />} />
       <Route path="/services/printer" element={<PrinterPage />} />

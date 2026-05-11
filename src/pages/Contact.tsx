@@ -45,9 +45,9 @@ export default function ContactPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Contact Us — TechCare Services</title>
+        <title>Contact Us — Digitek Solutions</title>
         <meta name="description" content="Get in touch for CCTV installation, laptop repair, or printer servicing. Free quotes, same-day response." />
-        <meta property="og:title" content="Contact TechCare Services" />
+        <meta property="og:title" content="Contact Digitek Solutions" />
         <meta property="og:description" content="Free quotes and same-day response." />
       </Helmet>
 
@@ -64,8 +64,8 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-6">
             {[
-              { icon: Phone, title: "Phone", value: "+1 (555) 010-2233", href: "tel:+15550102233" },
-              { icon: Mail, title: "Email", value: "hello@techcare.example", href: "mailto:hello@techcare.example" },
+              { icon: Phone, title: "Phone", value: "+91 98305 04138", href: "tel:+919830504138" },
+              { icon: Mail, title: "Email", value: "info@digiteksolutions.net.in", href: "mailto:info@digiteksolutions.net.in" },
               { icon: MapPin, title: "Service area", value: "Citywide & suburbs" },
               { icon: Clock, title: "Hours", value: "Mon–Sat, 9 AM – 8 PM" },
             ].map((c) => (

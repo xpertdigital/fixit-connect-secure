@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/services", label: "Services" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -22,7 +23,7 @@ export function SiteHeader() {
           <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground shadow-soft">
             <ShieldCheck className="h-5 w-5" />
           </span>
-          <span className="font-serif text-xl tracking-tight">TechCare Services</span>
+          <span className="font-serif text-xl tracking-tight">Digitek Solutions</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

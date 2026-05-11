@@ -119,7 +119,7 @@ Deno.serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "TechCare Services <onboarding@resend.dev>",
+        from: "Digitek Solutions <onboarding@resend.dev>",
         to: [NOTIFY_EMAIL],
         subject: `New contact: ${payload.name}${payload.service ? ` — ${payload.service}` : ""}`,
         html,
@@ -155,8 +155,8 @@ Deno.serve(async (req) => {
             ${payload.service ? `<div><strong>Service:</strong> ${escapeHtml(payload.service)}</div>` : ""}
             ${payload.message ? `<div style="margin-top: 8px;"><strong>Message:</strong><div style="white-space: pre-wrap; margin-top: 4px;">${escapeHtml(payload.message)}</div></div>` : ""}
           </div>
-          <p>If you need urgent assistance, feel free to call us directly at <a href="tel:+15550102233">+1 (555) 010-2233</a>.</p>
-          <p style="margin-top: 24px;">— The TechCare Services Team</p>
+          <p>If you need urgent assistance, feel free to call us directly at <a href="tel:+919830504138">+91 98305 04138</a>.</p>
+          <p style="margin-top: 24px;">— The Digitek Solutions Team</p>
         </div>
       `;
 
@@ -167,9 +167,9 @@ Deno.serve(async (req) => {
           Authorization: `Bearer ${RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: "TechCare Services <onboarding@resend.dev>",
+          from: "Digitek Solutions <onboarding@resend.dev>",
           to: [payload.email],
-          subject: "We've received your request — TechCare Services",
+          subject: "We've received your request — Digitek Solutions",
           html: confirmationHtml,
         }),
       });
