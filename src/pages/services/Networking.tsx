@@ -23,9 +23,9 @@ export default function NetworkingPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Office Networking — TechCare Services</title>
+        <title>Office Networking — Digitek Solutions</title>
         <meta name="description" content="Structured cabling, Wi-Fi, switches, routers, and firewall setup for offices. Reliable networks installed and maintained by certified technicians." />
-        <meta property="og:title" content="Office Networking — TechCare" />
+        <meta property="og:title" content="Office Networking — Digitek Solutions" />
         <meta property="og:description" content="Reliable office networks: cabling, Wi-Fi, switches, and firewalls." />
       </Helmet>
 

@@ -16,9 +16,9 @@ export default function ServicesPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Our Services — TechCare Services</title>
+        <title>Our Services — Digitek Solutions</title>
         <meta name="description" content="Explore our professional services: CCTV installation, laptop repair, and printer servicing for homes and businesses." />
-        <meta property="og:title" content="Our Services — TechCare" />
+        <meta property="og:title" content="Our Services — Digitek Solutions" />
         <meta property="og:description" content="CCTV, laptop, and printer service experts." />
       </Helmet>
 

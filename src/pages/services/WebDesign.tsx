@@ -23,9 +23,9 @@ export default function WebDesignPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Website Designing — TechCare Services</title>
+        <title>Website Designing — Digitek Solutions</title>
         <meta name="description" content="Modern, mobile-friendly websites for small businesses. Custom design, fast performance, SEO-ready, and easy to update." />
-        <meta property="og:title" content="Website Designing — TechCare" />
+        <meta property="og:title" content="Website Designing — Digitek Solutions" />
         <meta property="og:description" content="Modern, fast, mobile-friendly websites built for small businesses." />
       </Helmet>
 

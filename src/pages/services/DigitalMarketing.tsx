@@ -23,9 +23,9 @@ export default function DigitalMarketingPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Digital Marketing — TechCare Services</title>
+        <title>Digital Marketing — Digitek Solutions</title>
         <meta name="description" content="SEO, Google Ads, Meta Ads, and social media management. Get found online and grow leads with measurable digital marketing." />
-        <meta property="og:title" content="Digital Marketing — TechCare" />
+        <meta property="og:title" content="Digital Marketing — Digitek Solutions" />
         <meta property="og:description" content="SEO, paid ads, and social media that drive real leads." />
       </Helmet>
 

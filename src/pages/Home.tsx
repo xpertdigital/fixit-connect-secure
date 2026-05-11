@@ -25,9 +25,9 @@ export default function HomePage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>TechCare Services — CCTV, Laptop & Printer Repair Experts</title>
+        <title>Digitek Solutions — CCTV, Laptop & Printer Repair Experts</title>
         <meta name="description" content="Trusted local technicians for CCTV installation, laptop repair, and printer servicing. Same-day service, transparent pricing, no-fix no-fee guarantee." />
-        <meta property="og:title" content="TechCare Services — CCTV, Laptop & Printer Repair" />
+        <meta property="og:title" content="Digitek Solutions — CCTV, Laptop & Printer Repair" />
         <meta property="og:description" content="Trusted local technicians for CCTV, laptops, and printers. Same-day service." />
       </Helmet>
 
@@ -49,8 +49,8 @@ export default function HomePage() {
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5">
                 Book a free quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="tel:+15550102233" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-smooth hover:border-primary hover:text-primary">
-                <Phone className="h-4 w-4" /> +1 (555) 010-2233
+              <a href="tel:+919830504138" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-smooth hover:border-primary hover:text-primary">
+                <Phone className="h-4 w-4" /> +91 98305 04138
               </a>
             </div>
             <div className="mt-10 flex flex-wrap gap-6 text-sm text-muted-foreground">
@@ -115,7 +115,7 @@ export default function HomePage() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
-            <img src={whyChooseUsImage} alt="TechCare Services team of certified technicians ready to help" width={1280} height={960} loading="lazy" decoding="async" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant" />
+            <img src={whyChooseUsImage} alt="Digitek Solutions team of certified technicians ready to help" width={1280} height={960} loading="lazy" decoding="async" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant" />
           </div>
           <div className="order-1 lg:order-2">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">

@@ -16,9 +16,9 @@ export default function PrinterPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Printer Repair — TechCare Services</title>
+        <title>Printer Repair — Digitek Solutions</title>
         <meta name="description" content="On-site printer repair and servicing for inkjet, laser, and multifunction printers. Network setup, paper jams, print quality, and more." />
-        <meta property="og:title" content="Printer Repair — TechCare" />
+        <meta property="og:title" content="Printer Repair — Digitek Solutions" />
         <meta property="og:description" content="Keep your office productive with professional printer servicing." />
       </Helmet>
 

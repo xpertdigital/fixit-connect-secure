@@ -14,9 +14,9 @@ export default function AboutPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>About Us — TechCare Services</title>
-        <meta name="description" content="Meet the team behind TechCare Services. Local technicians with 10+ years of experience in CCTV, laptops, and printers." />
-        <meta property="og:title" content="About TechCare Services" />
+        <title>About Us — Digitek Solutions</title>
+        <meta name="description" content="Meet the team behind Digitek Solutions. Local technicians with 10+ years of experience in CCTV, laptops, and printers." />
+        <meta property="og:title" content="About Digitek Solutions" />
         <meta property="og:description" content="A local team of certified technicians you can trust." />
       </Helmet>
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl text-foreground md:text-6xl">A local team that <span className="text-primary">shows up.</span></h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-            TechCare Services started ten years ago with a simple promise: be the technicians we'd want to hire ourselves. Today, we serve hundreds of homes and businesses with that same standard.
+            Digitek Solutions started ten years ago with a simple promise: be the technicians we'd want to hire ourselves. Today, we serve hundreds of homes and businesses with that same standard.
           </p>
         </div>
       </section>

@@ -16,9 +16,9 @@ export default function LaptopPage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Laptop Repair — TechCare Services</title>
+        <title>Laptop Repair — Digitek Solutions</title>
         <meta name="description" content="Expert laptop repair for all major brands. Screen replacements, battery swaps, virus removal, data recovery, and hardware diagnostics." />
-        <meta property="og:title" content="Laptop Repair — TechCare" />
+        <meta property="og:title" content="Laptop Repair — Digitek Solutions" />
         <meta property="og:description" content="Fast, reliable laptop repairs with a no-fix no-fee promise." />
       </Helmet>
 

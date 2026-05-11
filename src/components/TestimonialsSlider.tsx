@@ -10,7 +10,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "TechCare set up 8 cameras across our shop in a single afternoon. Cabling is invisible and the mobile app works flawlessly.",
+      "Digitek Solutions set up 8 cameras across our shop in a single afternoon. Cabling is invisible and the mobile app works flawlessly.",
     name: "Priya R.",
     role: "Boutique Owner",
   },
