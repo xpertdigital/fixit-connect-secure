@@ -90,7 +90,7 @@
   --ink: oklch(0.22 0.08 264);
   --ink-foreground: oklch(0.98 0.005 250);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.08 264) 0%, oklch(0.32 0.18 264) 60%, oklch(0.45 0.22 262) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.96 0.025 260) 0%, oklch(0.93 0.04 260) 100%);
   --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
   --gradient-ink: linear-gradient(180deg, oklch(0.22 0.08 264), oklch(0.18 0.07 264));
   --shadow-soft: 0 6px 24px -10px oklch(0.22 0.08 264 / 0.18);
