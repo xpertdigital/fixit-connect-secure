@@ -164,8 +164,23 @@
 
   h1, h2, h3 {
     font-family: var(--font-serif);
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    letter-spacing: -0.025em;
   }
+}
+
+@utility bg-ink {
+  background-color: var(--ink);
+  color: var(--ink-foreground);
+}
+
+@utility bg-gradient-ink {
+  background-image: var(--gradient-ink);
+  color: var(--ink-foreground);
+}
+
+@utility text-ink {
+  color: var(--ink);
 }
 
 @utility font-serif {
