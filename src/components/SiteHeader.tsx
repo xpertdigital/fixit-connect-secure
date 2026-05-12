@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Menu, X, ShieldCheck } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -19,11 +20,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 text-foreground">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground shadow-soft">
-            <ShieldCheck className="h-5 w-5" />
-          </span>
-          <span className="font-serif text-xl tracking-tight">Digitek Solutions</span>
+        <Link to="/" className="flex items-center gap-2 text-foreground" aria-label="Digitek Solutions home">
+          <img src={logo} alt="Digitek Solutions" className="h-10 w-auto md:h-11" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
