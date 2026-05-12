@@ -32,16 +32,17 @@ export default function HomePage() {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-hero">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-28">
+      <section className="relative overflow-hidden bg-gradient-ink">
+        <div className="absolute inset-0 opacity-[0.07] [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:24px_24px]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-28">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-              <ShieldCheck className="h-3.5 w-3.5" /> Trusted by 500+ homes & businesses
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur">
+              <ShieldCheck className="h-3.5 w-3.5 text-accent" /> Trusted by 500+ homes & businesses
             </span>
-            <h1 className="mt-5 text-5xl leading-[1.05] text-foreground md:text-6xl">
-              Your tech, <span className="text-primary">uninterrupted.</span>
+            <h1 className="mt-5 text-5xl leading-[1.05] text-white md:text-6xl">
+              Your tech, <span className="bg-gradient-to-r from-accent to-primary-glow bg-clip-text text-transparent">uninterrupted.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
               Reliable CCTV installation, laptop repairs, and printer servicing — delivered by
               certified local technicians who show up on time and get it right the first time.
             </p>
@@ -49,11 +50,11 @@ export default function HomePage() {
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow hover:-translate-y-0.5">
                 Book a free quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="tel:+919830504138" className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-smooth hover:border-primary hover:text-primary">
+              <a href="tel:+919830504138" className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-smooth hover:border-accent hover:text-accent">
                 <Phone className="h-4 w-4" /> +91 98305 04138
               </a>
             </div>
-            <div className="mt-10 flex flex-wrap gap-6 text-sm text-muted-foreground">
+            <div className="mt-10 flex flex-wrap gap-6 text-sm text-white/70">
               {["Insured & licensed", "90-day warranty", "Transparent pricing"].map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-accent" /> {item}
@@ -63,8 +64,14 @@ export default function HomePage() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-10 blur-2xl" />
-            <img src={heroImage} alt="Technician installing a CCTV security camera on a building" width={1536} height={1024} fetchPriority="high" loading="eager" decoding="async" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-elegant" />
+            <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-primary/40 to-accent/30 opacity-60 blur-3xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-elegant">
+              <img src={heroImage} alt="Technician installing a CCTV security camera on a building" width={1536} height={1024} fetchPriority="high" loading="eager" decoding="async" className="aspect-[4/3] w-full object-cover" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+                <p className="text-sm font-semibold text-white">On-site service across the city</p>
+                <p className="text-xs text-white/75">Same-day visits • 7 days a week</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
