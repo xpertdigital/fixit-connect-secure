@@ -4,6 +4,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { Lock, Upload, Trash2, X, Loader2, ImagePlus, ShieldAlert } from "lucide-react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 const ADMIN_PASSWORD = "Raja@2026!#";
 
@@ -20,6 +22,7 @@ export default function GalleryPage() {
   const [images, setImages] = useState<GalleryImage[]>([]);
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   const fetchImages = async () => {
     setLoading(true);
@@ -92,18 +95,25 @@ export default function GalleryPage() {
           </div>
         ) : (
           <div className="columns-2 gap-4 [column-fill:_balance] md:columns-3 lg:columns-4">
-            {images.map((img) => (
+            {images.map((img, idx) => (
               <figure
                 key={img.id}
                 className="mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-smooth hover:shadow-elegant"
               >
-                <img
-                  src={img.url}
-                  alt={img.caption || "Digitek Solutions project photo"}
-                  loading="lazy"
-                  decoding="async"
-                  className="block w-full"
-                />
+                <button
+                  type="button"
+                  onClick={() => setLightboxIndex(idx)}
+                  className="block w-full cursor-zoom-in"
+                  aria-label={img.caption || "View image"}
+                >
+                  <img
+                    src={img.url}
+                    alt={img.caption || "Digitek Solutions project photo"}
+                    loading="lazy"
+                    decoding="async"
+                    className="block w-full transition-smooth hover:scale-[1.02]"
+                  />
+                </button>
                 {img.caption && (
                   <figcaption className="px-4 py-2 text-sm text-muted-foreground">
                     {img.caption}
@@ -114,6 +124,17 @@ export default function GalleryPage() {
           </div>
         )}
       </section>
+
+      <Lightbox
+        open={lightboxIndex >= 0}
+        index={lightboxIndex < 0 ? 0 : lightboxIndex}
+        close={() => setLightboxIndex(-1)}
+        slides={images.map((img) => ({
+          src: img.url,
+          alt: img.caption || "Digitek Solutions project photo",
+          description: img.caption || undefined,
+        }))}
+      />
 
       {open && (
         <ManageGalleryModal
