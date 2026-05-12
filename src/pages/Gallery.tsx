@@ -266,7 +266,7 @@ function ManageGalleryModal({
                     <img src={img.url} alt={img.caption || ""} className="aspect-square w-full object-cover" />
                     <button
                       onClick={() => handleDelete(img)}
-                      className="absolute right-2 top-2 inline-flex h-8 w-8 items-center justify-center rounded-md bg-destructive text-destructive-foreground opacity-0 shadow transition-opacity group-hover:opacity-100"
+                      className="absolute right-2 top-2 inline-flex h-8 w-8 items-center justify-center rounded-md bg-destructive text-destructive-foreground shadow transition-smooth hover:scale-105"
                       aria-label="Delete"
                     >
                       <Trash2 className="h-4 w-4" />
