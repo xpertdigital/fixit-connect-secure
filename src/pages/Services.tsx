@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Camera, Laptop, Printer, Network, Globe, Megaphone, ArrowRight } from "lucide-react";
+import { ShieldCheck, Laptop, Cpu, Network, Globe, Megaphone, ArrowRight } from "lucide-react";
 
 const services = [
-  { icon: Camera, title: "CCTV Installation", to: "/services/cctv", intro: "Site survey, professional installation, configuration, and remote monitoring setup.", items: ["Indoor & outdoor cameras", "DVR/NVR configuration", "Mobile app setup", "Annual maintenance plans"] },
+  { icon: ShieldCheck, title: "Home Security", to: "/services/home-security", intro: "Complete protection — CCTV cameras, burglar alarm systems, and digital smart-lock installation for homes, shops and offices.", items: ["HD/4K CCTV indoor & outdoor cameras", "Burglar alarms with siren & SMS alerts", "Fingerprint, RFID & app-based smart locks", "Mobile app remote viewing & control"] },
   { icon: Laptop, title: "Laptop Repair", to: "/services/laptop", intro: "Hardware and software diagnostics for all major brands — Dell, HP, Lenovo, Apple, ASUS, Acer.", items: ["Screen & keyboard replacement", "Battery & charging issues", "Virus & malware removal", "Data recovery & backup"] },
-  { icon: Printer, title: "Printer Repair", to: "/services/printer", intro: "Servicing for inkjet, laser, and multifunction printers — at home or on-site at your office.", items: ["Paper jam & roller fixes", "Print head cleaning", "Network printer setup", "Ink & toner support"] },
+  { icon: Cpu, title: "Industrial Automation", to: "/services/industrial-automation", intro: "Turnkey automation for offices, factories and institutions — from biometric attendance to smart pumps and conference rooms.", items: ["Biometric attendance systems", "Biometric door access control", "Water pump automation & sensors", "Wi-Fi digital display boards", "Video conferencing setup"] },
   { icon: Network, title: "Office Networking", to: "/services/networking", intro: "Structured cabling, business Wi-Fi, switches, and firewalls — designed and deployed for reliable office networks.", items: ["LAN cabling & patch panels", "Wi-Fi access points & roaming", "Routers, switches & VLANs", "Firewalls & remote-access VPN"] },
   { icon: Globe, title: "Website Designing", to: "/services/web-design", intro: "Modern, mobile-friendly websites with clean design, fast performance, and SEO-ready structure.", items: ["Custom responsive design", "SEO-ready pages", "Contact, WhatsApp & Maps", "Hosting & domain support"] },
   { icon: Megaphone, title: "Digital Marketing", to: "/services/digital-marketing", intro: "Local SEO, Google Ads, Meta Ads, and social media — measurable marketing that brings real leads.", items: ["Local SEO & Google Business", "Google & Meta Ads", "Social media management", "Monthly performance reports"] },

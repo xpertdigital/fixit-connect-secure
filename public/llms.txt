@@ -7,9 +7,9 @@
 - [Home](/): Overview of Digitek Solutions and core services.
 - [About](/about): Our team, values, and 10+ years of experience.
 - [Services](/services): Full list of services we offer.
-- [CCTV Installation](/services/cctv): Surveillance camera installation and remote monitoring setup.
+- [Home Security](/services/home-security): CCTV cameras, burglar alarm systems, and digital smart-lock installation.
 - [Laptop Repair](/services/laptop): Screen, battery, virus, and hardware repairs for all major brands.
-- [Printer Repair](/services/printer): On-site printer servicing, network setup, and AMC plans.
+- [Industrial Automation](/services/industrial-automation): Biometric attendance & access, water-pump automation, Wi-Fi display boards, video conferencing setup.
 - [Office Networking](/services/networking): Structured cabling, business Wi-Fi, switches, and firewalls.
 - [Website Designing](/services/web-design): Modern, mobile-friendly websites for small businesses.
 - [Digital Marketing](/services/digital-marketing): SEO, Google Ads, and social media management.

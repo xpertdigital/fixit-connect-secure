@@ -66,7 +66,7 @@ export default function ContactPage() {
             {[
               { icon: Phone, title: "Phone", value: "+91 98305 04138", href: "tel:+919830504138" },
               { icon: Mail, title: "Email", value: "info@digiteksolutions.net.in", href: "mailto:info@digiteksolutions.net.in" },
-              { icon: MapPin, title: "Service area", value: "Citywide & suburbs" },
+              { icon: MapPin, title: "Address", value: "27/C, Jogendra Basak Road, Baranagar, Kolkata - 700036, West Bengal", href: "https://maps.app.goo.gl/ZvCx3E3zT2gVgwYr6" },
               { icon: Clock, title: "Hours", value: "Mon–Sat, 9 AM – 8 PM" },
             ].map((c) => (
               <div key={c.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
@@ -112,9 +112,9 @@ export default function ContactPage() {
                     <label htmlFor="service" className="text-sm font-medium text-foreground">Service needed</label>
                     <select id="service" name="service" className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" defaultValue="" required>
                       <option value="" disabled>Select a service</option>
-                      <option>CCTV Installation</option>
+                      <option>Home Security</option>
                       <option>Laptop Repair</option>
-                      <option>Printer Repair</option>
+                      <option>Industrial Automation</option>
                       <option>Other</option>
                     </select>
                   </div>
@@ -137,6 +137,36 @@ export default function ContactPage() {
                 </>
               )}
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-secondary/40 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl text-foreground">Find us on the map</h2>
+              <p className="mt-2 text-muted-foreground">27/C, Jogendra Basak Road, Baranagar, Kolkata - 700036, West Bengal</p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/ZvCx3E3zT2gVgwYr6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:bg-primary-glow"
+            >
+              Open in Google Maps
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-border shadow-elegant">
+            <iframe
+              title="Digitek Solutions location on Google Maps"
+              src="https://www.google.com/maps?q=27%2FC%2C%20Jogendra%20Basak%20Road%2C%20Baranagar%2C%20Kolkata%20700036%2C%20West%20Bengal&output=embed"
+              width="100%"
+              height="420"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block w-full border-0"
+            />
           </div>
         </div>
       </section>
