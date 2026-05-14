@@ -140,6 +140,36 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <section className="border-t border-border bg-secondary/40 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl text-foreground">Find us on the map</h2>
+              <p className="mt-2 text-muted-foreground">27/C, Jogendra Basak Road, Baranagar, Kolkata - 700036, West Bengal</p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/ZvCx3E3zT2gVgwYr6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:bg-primary-glow"
+            >
+              Open in Google Maps
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-border shadow-elegant">
+            <iframe
+              title="Digitek Solutions location on Google Maps"
+              src="https://www.google.com/maps?q=27%2FC%2C%20Jogendra%20Basak%20Road%2C%20Baranagar%2C%20Kolkata%20700036%2C%20West%20Bengal&output=embed"
+              width="100%"
+              height="420"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block w-full border-0"
+            />
+          </div>
+        </div>
+      </section>
     </SiteLayout>
   );
 }
