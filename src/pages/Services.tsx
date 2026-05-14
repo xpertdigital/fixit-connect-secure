@@ -24,7 +24,7 @@ export default function ServicesPage() {
 
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-5xl text-foreground md:text-6xl">Services built around <span className="text-primary">your uptime.</span></h1>
+          <h1 className="text-5xl text-foreground md:text-6xl">Our Professional Services — <span className="text-primary">built around your uptime.</span></h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
             From a single laptop fix to a multi-camera CCTV rollout, we handle the technical work so you don't have to.
           </p>
