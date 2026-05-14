@@ -41,9 +41,9 @@ export default function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/services" element={<ServicesPage />} />
       <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/services/cctv" element={<CctvPage />} />
+      <Route path="/services/home-security" element={<HomeSecurityPage />} />
       <Route path="/services/laptop" element={<LaptopPage />} />
-      <Route path="/services/printer" element={<PrinterPage />} />
+      <Route path="/services/industrial-automation" element={<IndustrialAutomationPage />} />
       <Route path="/services/networking" element={<NetworkingPage />} />
       <Route path="/services/web-design" element={<WebDesignPage />} />
       <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
