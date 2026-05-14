@@ -40,7 +40,7 @@ export default function HomePage() {
               <ShieldCheck className="h-3.5 w-3.5 text-accent" /> Trusted by 500+ homes & businesses
             </span>
             <h1 className="mt-5 text-5xl leading-[1.05] text-white md:text-6xl">
-              CCTV, Laptop &amp; Printer Repair — <span className="bg-gradient-to-r from-accent to-primary-glow bg-clip-text text-transparent">your tech, uninterrupted.</span>
+              Home Security, Laptop Repair &amp; Automation — <span className="bg-gradient-to-r from-accent to-primary-glow bg-clip-text text-transparent">your tech, uninterrupted.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
               Reliable CCTV installation, laptop repairs, and printer servicing — delivered by
