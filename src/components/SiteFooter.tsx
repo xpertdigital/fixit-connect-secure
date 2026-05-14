@@ -20,9 +20,9 @@ export function SiteFooter() {
           <div>
             <h4 className="font-serif text-base text-foreground">Services</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/services/cctv" className="hover:text-primary">CCTV Installation</Link></li>
+              <li><Link to="/services/home-security" className="hover:text-primary">Home Security</Link></li>
               <li><Link to="/services/laptop" className="hover:text-primary">Laptop Repair</Link></li>
-              <li><Link to="/services/printer" className="hover:text-primary">Printer Repair</Link></li>
+              <li><Link to="/services/industrial-automation" className="hover:text-primary">Industrial Automation</Link></li>
             </ul>
           </div>
 
