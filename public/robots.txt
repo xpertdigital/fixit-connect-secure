@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fixit-connect-secure.lovable.app/sitemap.xml

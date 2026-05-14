@@ -53,7 +53,7 @@ export default function ContactPage() {
 
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl text-foreground md:text-6xl">Let's <span className="text-primary">talk.</span></h1>
+          <h1 className="text-5xl text-foreground md:text-6xl">Contact Digitek Solutions for a <span className="text-primary">free quote.</span></h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
             Tell us what you need — installation, repair, or just a quick question. We respond within an hour during business hours.
           </p>

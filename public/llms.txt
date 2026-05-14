@@ -1,0 +1,17 @@
+# Digitek Solutions
+
+> Local technicians providing CCTV installation, laptop repair, printer servicing, office networking, website design, and digital marketing — with same-day service and a no-fix no-fee guarantee.
+
+## Pages
+
+- [Home](/): Overview of Digitek Solutions and core services.
+- [About](/about): Our team, values, and 10+ years of experience.
+- [Services](/services): Full list of services we offer.
+- [CCTV Installation](/services/cctv): Surveillance camera installation and remote monitoring setup.
+- [Laptop Repair](/services/laptop): Screen, battery, virus, and hardware repairs for all major brands.
+- [Printer Repair](/services/printer): On-site printer servicing, network setup, and AMC plans.
+- [Office Networking](/services/networking): Structured cabling, business Wi-Fi, switches, and firewalls.
+- [Website Designing](/services/web-design): Modern, mobile-friendly websites for small businesses.
+- [Digital Marketing](/services/digital-marketing): SEO, Google Ads, and social media management.
+- [Gallery](/gallery): Photos of recent installations and projects.
+- [Contact](/contact): Phone +91 98305 04138, email info@digiteksolutions.net.in.

@@ -40,7 +40,7 @@ export default function HomePage() {
               <ShieldCheck className="h-3.5 w-3.5 text-accent" /> Trusted by 500+ homes & businesses
             </span>
             <h1 className="mt-5 text-5xl leading-[1.05] text-white md:text-6xl">
-              Your tech, <span className="bg-gradient-to-r from-accent to-primary-glow bg-clip-text text-transparent">uninterrupted.</span>
+              CCTV, Laptop &amp; Printer Repair — <span className="bg-gradient-to-r from-accent to-primary-glow bg-clip-text text-transparent">your tech, uninterrupted.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/75">
               Reliable CCTV installation, laptop repairs, and printer servicing — delivered by
@@ -91,7 +91,7 @@ export default function HomePage() {
               <h3 className="mt-6 text-2xl text-foreground">{s.title}</h3>
               <p className="mt-3 text-muted-foreground">{s.description}</p>
               <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-primary">
-                Learn more <ArrowRight className="h-4 w-4 transition-smooth group-hover:translate-x-1" />
+                Learn more about {s.title} <ArrowRight className="h-4 w-4 transition-smooth group-hover:translate-x-1" />
               </span>
             </Link>
           ))}

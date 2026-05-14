@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <section className="bg-gradient-hero py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl text-foreground md:text-6xl">A local team that <span className="text-primary">shows up.</span></h1>
+          <h1 className="text-5xl text-foreground md:text-6xl">About Digitek Solutions — <span className="text-primary">a local team that shows up.</span></h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
             Digitek Solutions started ten years ago with a simple promise: be the technicians we'd want to hire ourselves. Today, we serve hundreds of homes and businesses with that same standard.
           </p>
@@ -30,6 +30,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <h2 className="sr-only">Our values</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {values.map((v) => (
             <div key={v.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">

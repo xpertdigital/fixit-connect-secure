@@ -35,6 +35,7 @@ export default function LaptopPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <h2 className="sr-only">Laptop repair services we offer</h2>
         <div className="grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <div key={s.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-smooth hover:border-primary/30 hover:shadow-elegant">
