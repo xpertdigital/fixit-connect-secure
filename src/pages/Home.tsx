@@ -25,10 +25,10 @@ export default function HomePage() {
   return (
     <SiteLayout>
       <Helmet>
-        <title>Digitek Solutions — CCTV, Laptop & Printer Repair Experts</title>
-        <meta name="description" content="Trusted local technicians for CCTV installation, laptop repair, and printer servicing. Same-day service, transparent pricing, no-fix no-fee guarantee." />
-        <meta property="og:title" content="Digitek Solutions — CCTV, Laptop & Printer Repair" />
-        <meta property="og:description" content="Trusted local technicians for CCTV, laptops, and printers. Same-day service." />
+        <title>Digitek Solutions — Home Security, Laptop Repair & Industrial Automation</title>
+        <meta name="description" content="Trusted local technicians for home security (CCTV, alarms, smart locks), laptop repair, and industrial automation. Same-day service, no-fix no-fee guarantee." />
+        <meta property="og:title" content="Digitek Solutions — Home Security & Industrial Automation" />
+        <meta property="og:description" content="Home security, laptop repair, and industrial automation by trusted local technicians." />
       </Helmet>
 
       {/* Hero */}
