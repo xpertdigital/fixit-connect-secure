@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
-import { Camera, Laptop, Printer, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone, Users, Wrench, ThumbsUp, BadgeCheck } from "lucide-react";
+import { ShieldCheck as ShieldIcon, Laptop, Cpu, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone, Users, Wrench, ThumbsUp, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import whyChooseUsImage from "@/assets/why-choose-us.jpg";
 
 const services = [
-  { icon: Camera, title: "CCTV Installation", description: "Secure your home or business with professionally installed surveillance systems, fully configured for remote monitoring.", to: "/services/cctv" },
+  { icon: ShieldIcon, title: "Home Security", description: "CCTV cameras, burglar alarms and digital smart locks — complete protection for your home, shop or office.", to: "/services/home-security" },
   { icon: Laptop, title: "Laptop Repair", description: "Screen replacements, battery swaps, virus removal, and hardware diagnostics for every major laptop brand.", to: "/services/laptop" },
-  { icon: Printer, title: "Printer Repair", description: "Keep your office productive with fast servicing, ink/toner support, and network printer setup.", to: "/services/printer" },
+  { icon: Cpu, title: "Industrial Automation", description: "Biometric attendance & access, water-pump automation, Wi-Fi display boards and video conferencing setups.", to: "/services/industrial-automation" },
   { icon: Network, title: "Office Networking", description: "Structured cabling, business Wi-Fi, switches, and firewalls — networks built to keep your team productive.", to: "/services/networking" },
   { icon: Globe, title: "Website Designing", description: "Modern, mobile-friendly websites that load fast, rank well, and turn visitors into customers.", to: "/services/web-design" },
   { icon: Megaphone, title: "Digital Marketing", description: "SEO, Google Ads, and social media management that bring measurable leads to your business.", to: "/services/digital-marketing" },
