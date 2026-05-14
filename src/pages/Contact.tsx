@@ -66,7 +66,7 @@ export default function ContactPage() {
             {[
               { icon: Phone, title: "Phone", value: "+91 98305 04138", href: "tel:+919830504138" },
               { icon: Mail, title: "Email", value: "info@digiteksolutions.net.in", href: "mailto:info@digiteksolutions.net.in" },
-              { icon: MapPin, title: "Service area", value: "Citywide & suburbs" },
+              { icon: MapPin, title: "Address", value: "27/C, Jogendra Basak Road, Baranagar, Kolkata - 700036, West Bengal", href: "https://maps.app.goo.gl/ZvCx3E3zT2gVgwYr6" },
               { icon: Clock, title: "Hours", value: "Mon–Sat, 9 AM – 8 PM" },
             ].map((c) => (
               <div key={c.title} className="flex gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
