@@ -112,9 +112,9 @@ export default function ContactPage() {
                     <label htmlFor="service" className="text-sm font-medium text-foreground">Service needed</label>
                     <select id="service" name="service" className="mt-1.5 w-full rounded-lg border border-input bg-background px-3 py-2.5 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" defaultValue="" required>
                       <option value="" disabled>Select a service</option>
-                      <option>CCTV Installation</option>
+                      <option>Home Security</option>
                       <option>Laptop Repair</option>
-                      <option>Printer Repair</option>
+                      <option>Industrial Automation</option>
                       <option>Other</option>
                     </select>
                   </div>
