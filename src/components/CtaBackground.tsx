@@ -15,7 +15,7 @@ interface CtaBackgroundProps {
  * then put your CTA content in a sibling with `relative z-10`.
  */
 export function CtaBackground({
-  color = "hsl(220 90% 25%)",
+  color = "#1e3a8a",
   speed = 4,
   scale = 1,
   noiseIntensity = 1.4,
