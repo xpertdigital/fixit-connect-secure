@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
+import { CtaBackground } from "@/components/CtaBackground";
 import { Globe, CheckCircle2, ArrowRight } from "lucide-react";
 
 const features = [
@@ -86,11 +87,16 @@ export default function WebDesignPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-20 text-center sm:px-6 lg:px-8">
-        <h2 className="text-3xl text-foreground">Ready for a website that performs?</h2>
-        <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-elegant transition-smooth hover:bg-primary-glow">
-          Get a project quote <ArrowRight className="h-4 w-4" />
-        </Link>
+      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl p-12 text-center shadow-elegant md:p-14">
+          <CtaBackground color="#1d4ed8" speed={3} noiseIntensity={1.2} />
+          <div className="relative z-10">
+            <h2 className="text-3xl text-primary-foreground md:text-4xl">Ready for a website that performs?</h2>
+            <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-lg bg-card px-6 py-3 font-semibold text-primary shadow-elegant transition-smooth hover:-translate-y-0.5">
+              Get a project quote <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
       </section>
     </SiteLayout>
   );
