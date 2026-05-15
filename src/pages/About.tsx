@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
+import { CtaBackground } from "@/components/CtaBackground";
 import { ShieldCheck, Heart, Users, Wrench, ArrowRight } from "lucide-react";
 
 const values = [
