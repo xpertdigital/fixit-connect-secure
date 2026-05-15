@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { SiteLayout } from "@/components/SiteLayout";
+import { CtaBackground } from "@/components/CtaBackground";
 import { TestimonialsSlider } from "@/components/TestimonialsSlider";
 import { ShieldCheck as ShieldIcon, Laptop, Cpu, Network, Globe, Megaphone, ShieldCheck, Clock, Award, ArrowRight, CheckCircle2, Phone, Users, Wrench, ThumbsUp, BadgeCheck } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
@@ -161,14 +162,17 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-primary p-12 text-center shadow-elegant md:p-16">
-          <h2 className="text-4xl text-primary-foreground md:text-5xl">Ready to get back to business?</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/85">
-            Tell us what's broken or what you'd like installed. We'll be in touch within an hour.
-          </p>
-          <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-card px-8 py-4 text-base font-semibold text-primary shadow-accent-glow transition-smooth hover:-translate-y-0.5">
-            Get in touch <ArrowRight className="h-5 w-5" />
-          </Link>
+        <div className="relative overflow-hidden rounded-3xl p-12 text-center shadow-elegant md:p-16">
+          <CtaBackground color="#1d4ed8" speed={3} scale={1} noiseIntensity={1.2} />
+          <div className="relative z-10">
+            <h2 className="text-4xl text-primary-foreground md:text-5xl">Ready to get back to business?</h2>
+            <p className="mx-auto mt-4 max-w-xl text-lg text-primary-foreground/85">
+              Tell us what's broken or what you'd like installed. We'll be in touch within an hour.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-card px-8 py-4 text-base font-semibold text-primary shadow-accent-glow transition-smooth hover:-translate-y-0.5">
+              Get in touch <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </section>
     </SiteLayout>
