@@ -160,12 +160,14 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-2xl border border-border shadow-elegant">
             <iframe
               title="Digitek Solutions location on Google Maps"
-              src="https://www.google.com/maps?q=27%2FC%2C%20Jogendra%20Basak%20Road%2C%20Baranagar%2C%20Kolkata%20700036%2C%20West%20Bengal&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.4712511234115!2d88.3742854762601!3d22.636211879446485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89dffaf97b4b5%3A0x3706c2a744f55cbd!2sDigitek%20Solutions!5e0!3m2!1sen!2sin!4v1778893233433!5m2!1sen!2sin"
               width="100%"
               height="420"
+              style={{ border: 0 }}
+              allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="block w-full border-0"
+              className="block w-full"
             />
           </div>
         </div>
