@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
@@ -35,19 +36,22 @@ function NotFound() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/services" element={<ServicesPage />} />
-      <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/services/home-security" element={<HomeSecurityPage />} />
-      <Route path="/services/laptop" element={<LaptopPage />} />
-      <Route path="/services/industrial-automation" element={<IndustrialAutomationPage />} />
-      <Route path="/services/networking" element={<NetworkingPage />} />
-      <Route path="/services/web-design" element={<WebDesignPage />} />
-      <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/services/home-security" element={<HomeSecurityPage />} />
+        <Route path="/services/laptop" element={<LaptopPage />} />
+        <Route path="/services/industrial-automation" element={<IndustrialAutomationPage />} />
+        <Route path="/services/networking" element={<NetworkingPage />} />
+        <Route path="/services/web-design" element={<WebDesignPage />} />
+        <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
