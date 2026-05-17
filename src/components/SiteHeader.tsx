@@ -38,7 +38,7 @@ export function SiteHeader() {
             "hasMega" in item && item.hasMega ? (
               <div
                 key={item.to}
-                className="relative"
+                className="relative flex h-16 items-center"
                 onMouseEnter={() => setMegaOpen(true)}
                 onMouseLeave={() => setMegaOpen(false)}
               >
