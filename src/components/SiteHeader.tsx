@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ShieldCheck, Laptop, Cpu, Network, Globe, Megaphone, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import { useQuoteModal } from "@/components/QuoteModal";
 
 const navItems = [
   { to: "/", label: "Home" },
@@ -24,6 +25,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const { pathname } = useLocation();
+  const { open: openQuote } = useQuoteModal();
   const isActive = (to: string) => (to === "/" ? pathname === "/" : pathname === to || pathname.startsWith(to + "/"));
 
   return (
@@ -61,12 +63,13 @@ export function SiteHeader() {
               </Link>
             )
           )}
-          <Link
-            to="/contact"
+          <button
+            type="button"
+            onClick={openQuote}
             className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-smooth hover:bg-primary-glow"
           >
             Book a Visit
-          </Link>
+          </button>
         </nav>
 
         <button
