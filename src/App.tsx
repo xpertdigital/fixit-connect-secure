@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import { QuoteModalProvider } from "./components/QuoteModal";
 import HomePage from "./pages/Home";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
@@ -36,7 +37,7 @@ function NotFound() {
 
 export default function App() {
   return (
-    <>
+    <QuoteModalProvider>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -52,6 +53,6 @@ export default function App() {
         <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </QuoteModalProvider>
   );
 }
